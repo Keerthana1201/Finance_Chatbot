@@ -1,38 +1,68 @@
-# Finance_Chatbot
+**FINANCIAL INSIGHTS CHATBOT SYSTEM**
 
-**Aim:**
+**Aim of the Project**
 
-To develop an interactive, AI-powered financial chatbot web application that allows users to query and visualize financial data—such as revenue, net income, and assets—of major companies in a user-friendly and visually engaging manner using natural language input.
+The aim of this project is to develop an interactive financial chatbot that provides users with real-time financial metrics—such as revenue, net income, and assets—of top companies through natural language queries. The system uses basic Natural Language Processing (NLP) to understand queries and displays corresponding financial data and dynamic charts using a web-based interface.
 
-**Tools Used:**
+**Tools Used**
 
-- Programming Language: Python
-- Framework: Streamlit (for building the web interface)
+- **Python** – Core development and logic
 
-**Libraries:**
+- **Streamlit** – For building an interactive and responsive web interface
 
-- Pandas – for data cleaning and manipulation
-- Altair – for generating charts and visualizations
-- re – for keyword matching using regular expressions
-- base64, HTML/CSS – for background design and layout customization
+- **Pandas** – For data handling and analysis
 
- **Methodology:**
- 
-- Loaded a CSV dataset containing company financial data
-- Cleaned and converted text-based financial values to numeric format
-- Used keyword mapping and regular expressions to match user queries with company names, years, and financial metrics
+- **Altair** – For generating interactive financial line charts
 
-Designed a two-page interface:
+- **Regular Expressions (re)** – To extract companies and years from user queries
 
-- Welcome Dashboard with background image and instructions
-- Chatbot Dashboard with response display and dynamic line charts
+- **Base64** – For dynamic background image loading
 
-Implemented custom styling with HTML and CSS for better aesthetics
+- **CSV** – As the data source for financial metrics
 
-**Advantages:**
+- **HTML & CSS** (injected via Streamlit) – To style and personalize the UI with logos, text boxes, and themes
 
-- Easy-to-use interface with clear instructions
-- Understands flexible natural language queries
-- Provides instant financial responses with visual insights
-- Great for students, analysts, and financial learners
-- No need to manually search spreadsheets – all insights in one place
+**Project Use**
+
+ This chatbot simplifies financial analysis by offering:
+- Instant access to historical and recent financial data of companies.
+- Natural language interaction for ease of use (e.g., “Tesla revenue in 2023”).
+- Visual financial insights via dynamic line charts.
+- A user-friendly, stylish interface accessible via any browser.
+
+**Methodology**
+
+**1. Dataset Integration**
+
+- Loads company financial data from a CSV file.
+- Cleans columns (Revenue, Net Income, Assets) by removing special characters and ensuring numeric formats.
+
+**2. NLP-Based Query Processing**
+
+- Extracts company names and years from user input using string matching and regex.
+- Maps flexible keywords (e.g., “sales”, “turnover” → revenue) to specific financial metrics using a predefined dictionary.
+
+**3. Chatbot Logic**
+
+- Matches queries against cleaned and structured data.
+- Returns textual financial insights such as:
+  “Apple total revenue in 2022: $394,328.00”
+- If a valid metric and company are matched, it proceeds to chart generation.
+
+**4. Data Visualization**
+
+- Generates a dynamic Altair line chart for the requested metric over multiple years.
+- Tooltip-enabled chart shows financial trends visually to the user.
+
+**5. Streamlit Web Application**
+
+- Welcome dashboard with chatbot usage instructions.
+- Financial chatbot interface with real-time query input.
+
+**Advantages**
+
+- Natural Language Querying – No need to remember exact database terms; the chatbot handles variations like “profit” vs “net income”. Interactive Charts – Visualize company performance trends over time.
+- Interactive Charts – Visualize company performance trends over time.
+- Web-Based Interface – Easy to deploy and access from anywhere.
+- Modular Design – Easy to extend for more companies, metrics, or predictive insights.
+- User-Centric UI – Clean, responsive layout with intuitive navigation.
